@@ -1,0 +1,8 @@
+before_install:
+  - apt-get install -y libopencv-dev
+
+simulation:
+  - project: NextageSample.xml
+    init:
+      - echo "hello world!"
+      - echo "hello second world!"

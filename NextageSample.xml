@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<grxui>
+    <mode name="Simulation">
+  	  <item class="com.generalrobotix.ui.item.GrxSimulationItem" name="SampleSimulation" select="true">
+  	  		<property name="integrate" value="true"/>
+			<property name="viewsimulate" value="false"/>
+            <property name="totalTime" value="10.0 "/>
+            <property name="timeStep" value="0.0010 "/>
+            <property name="gravity" value="9.8 "/>
+            <property name="method" value="RUNGE_KUTTA"/>
+        </item>
+        <item class="com.generalrobotix.ui.item.GrxWorldStateItem" name="PA10" select="true">
+            <property name="logTimeStep" value="0.0010 "/>
+        </item>
+        <item class="com.generalrobotix.ui.item.GrxModelItem" name="nextage" select="true" url="$(CURRENT_DIR)/rtmros_nextage/nextage_description/models/main.wrl">
+            <property name="isRobot" value="true"/>
+            <property name="BASE.rotation" value="0.0 0.0 1.0 0.0"/>
+            <property name="BASE.translation" value="0.0 0.0 0.0 "/>
+        </item>
+        <item class="com.generalrobotix.ui.item.GrxModelItem" name="floor" select="true" url="$(CURRENT_DIR)/floor.wrl">
+            <property name="isRobot" value="false"/>
+            <property name="WAIST.rotation" value="0.0 1.0 0.0 0.0 "/>
+            <property name="WAIST.translation" value="0.0 0.0 -0.10000000149011612 "/>
+        </item>
+    </mode>
+</grxui>
